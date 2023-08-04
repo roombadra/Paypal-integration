@@ -51,7 +51,7 @@ class PaypalController extends Controller
 
         $response = $provider->capturePaymentOrder($request->token);
 
-        dd($response);
+        //dd($response);
 
         if (isset($response['status']) && $response['status'] == 'COMPLETED') {
             return 'Payment is successful!';
